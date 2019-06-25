@@ -3413,7 +3413,7 @@ var Gitment = function () {
       }, options);
 
       this.state.user.isLoggingIn = true;
-      _utils.http.post('https://test.writeyoursmile.com', {
+      _utils.http.post('https://hexo.writeyoursmile.com/login/oauth/authorize', {
         code: code,
         client_id: client_id,
         client_secret: client_secret
