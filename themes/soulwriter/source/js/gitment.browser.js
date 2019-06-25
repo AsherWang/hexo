@@ -3492,7 +3492,7 @@ var Gitment = function () {
 
       return _utils.http.post('/repos/' + owner + '/' + repo + '/issues', {
         title: title,
-        labels: labels.concat(['gitment', id]),
+        labels: labels.concat(['gitment', id.replace('https://hexo.writeyoursmile.com/','')]),
         body: link + '\n\n' + desc
       }).then(function (meta) {
         _this5.state.meta = meta;
