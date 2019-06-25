@@ -42,9 +42,10 @@
   </div>
 </section>
 <% } %>
+<%if (comment) {%>
 <section id="comments">
 </section>
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<%- js('js/gitment.browser') %>
 <script>
   const gitment = new Gitment({
     // id: 'Your page ID', // optional
@@ -64,3 +65,4 @@
   // or
   // document.body.appendChild(gitment.render())
 </script>
+<%}%>
