@@ -42,3 +42,25 @@
   </div>
 </section>
 <% } %>
+<section id="comments">
+</section>
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  const gitment = new Gitment({
+    // id: 'Your page ID', // optional
+    owner: 'AsherWang',
+    repo: 'https://github.com/AsherWang/hexo',
+    oauth: {
+      client_id: '19b68960f0841027e1fd',
+      client_secret: 'b5fa47e654487377f219fe7e4cd0a4dfdb182078',
+    },
+    // ...
+    // For more available options, check out the documentation below
+  })
+
+  gitment.render('comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
