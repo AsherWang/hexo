@@ -3417,7 +3417,7 @@ var Gitment = function () {
         code: code,
         client_id: client_id,
         client_secret: client_secret
-      }, '').then(function (data) {s
+      }, '').then(function (data) {
         _this.accessToken = data.access_token;
         _this.update();
       }).catch(function (e) {
