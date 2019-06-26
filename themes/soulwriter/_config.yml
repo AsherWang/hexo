@@ -2,11 +2,18 @@
 menu:
   Home: /
   Archives: /archives
-rss: /atom.xml
+# rss: /atom.xml
+
+# 右上角github地址
+github: https://github.com/AsherWang
+
+# 控制右上角的搜索按钮
+search: false
 
 # Content
 excerpt_link: Read More
 fancybox: true
+share: false
 
 # Sidebar
 sidebar: right
@@ -35,3 +42,13 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+
+
+# 评论系统
+gitment:
+  enable: true
+  owner: 'AsherWang'
+  repo: 'hexo'
+  client_id: '97e4b073e4806a45df2e'
+  client_secret: '1dcd823b7abf99de1de94254e6d6fd5a98a6b263'
+  

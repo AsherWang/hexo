@@ -23,10 +23,9 @@
       <% } %>
     </div>
     <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
-      <% if (post.comments && config.disqus_shortname){ %>
-        <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
-      <% } %>
+      <%if (theme.share) {%>
+        <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a>
+      <%}%>
       <%- partial('post/tag') %>
     </footer>
   </div>
@@ -34,35 +33,23 @@
     <%- partial('post/nav') %>
   <% } %>
 </article>
-
-<% if (!index && post.comments && config.disqus_shortname){ %>
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
-<% } %>
-<%if (comment) {%>
+<%if (!index && post.comments && comment && theme.gitment.enable) {%>
 <section id="comments">
 </section>
 <%- js('js/gitment.browser') %>
 <script>
   const gitment = new Gitment({
     // id: 'Your page ID', // optional
-    owner: 'AsherWang',
-    repo: 'hexo',
+    owner: "<%=theme.gitment.owner%>",
+    repo: "<%=theme.gitment.repo%>",
     oauth: {
-      client_id: '97e4b073e4806a45df2e',
-      client_secret: '1dcd823b7abf99de1de94254e6d6fd5a98a6b263',
+      client_id: "<%=theme.gitment.client_id%>",
+      client_secret: "<%=theme.gitment.client_secret%>",
     },
     // ...
     // For more available options, check out the documentation below
   })
 
   gitment.render('comments')
-  // or
-  // gitment.render(document.getElementById('comments'))
-  // or
-  // document.body.appendChild(gitment.render())
 </script>
 <%}%>

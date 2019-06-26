@@ -1,4 +1,5 @@
 categories: 分类
+github: Github
 search: 搜索
 tags: 标签
 tagcloud: 标签云
@@ -17,3 +18,8 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+
+# 顶部菜单翻译
+menu:
+  Home: 首页
+  Archives: 归档
