@@ -3210,6 +3210,8 @@ function ajaxFactory(method) {
       url += Query.stringify(data);
     }
 
+    req.withCredentials = true;
+
     var p = new Promise(function (resolve, reject) {
       req.addEventListener('load', function () {
         var contentType = req.getResponseHeader('content-type');
