@@ -2,8 +2,9 @@
   margin: block-margin 0
 
 .article-inner
-  @extend $block
-  overflow: hidden
+  // @extend $block
+  // overflow: hidden
+  background #ffffffcc
 
 .article-meta
   clearfix()
@@ -26,7 +27,8 @@
   margin: 0 12px 1em
 
 .article-header
-  padding: article-padding
+  padding: article-padding article-padding 0 article-padding
+  border-bottom 1px solid #efefef
 
 .article-title
   text-decoration: none
@@ -42,7 +44,7 @@
   @extend $base-style
   clearfix()
   color: color-default
-  padding: 0 article-padding
+  padding: 5px article-padding
   p, table
     line-height: line-height
     margin: line-height 0
@@ -140,9 +142,10 @@
   clearfix()
   font-size: 0.85em
   line-height: line-height
-  border-top: 1px solid color-border
+  // border-top: 1px solid color-border
+  border-top: 1px solid #EFEFEF
   padding-top: line-height
-  margin: 0 article-padding article-padding
+  margin: 0 0 article-padding
   a
     color: color-grey
     text-decoration: none
